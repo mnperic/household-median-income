@@ -45,7 +45,7 @@ d3.json(geoData).then(function(data) {
 
     // Bind a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
+      layer.bindPopup("ZIP Code: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
         "$" + feature.properties.MHI2016);
     }
   }).addTo(myMap);
