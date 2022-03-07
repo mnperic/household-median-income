@@ -1,6 +1,6 @@
 // Create map object
 var myMap = L.map("map", {
-  center: [-36.9848, 144.3906],
+  center: [34.0522, -118.2437],
   zoom: 8
 });
 
@@ -15,11 +15,11 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(myMap);
 
 // Load geojson data
-var geoData = "Users/minoperic/Data Analytics/Data Investigations/vic-median-income/static/data/vic_median_household_income_2016.geojson";
+var geoData = "static/data/Median_Household_Income_2016.geojson";
 
 var geojson;
 
-// Select data with D3
+// Grab data via d3
 d3.json(geoData).then(function(data) {
 
   // Create new choropleth layer
@@ -68,14 +68,14 @@ d3.json(geoData).then(function(data) {
     div.innerHTML = legendInfo;
 
     limits.forEach(function(limit, index) {
-      labels.push("<li style=\"background-colour: " + colors[index] + "\"></li>");
+      labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
     });
 
     div.innerHTML += "<ul>" + labels.join("") + "</ul>";
     return div;
   };
 
-  // Add legend to the map
+  // Add legend to map
   legend.addTo(myMap);
 
 });
