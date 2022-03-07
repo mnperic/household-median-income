@@ -1,6 +1,6 @@
 // Create map object
 var myMap = L.map("map", {
-  center: [34.0522, -118.2437],
+  center: [-36.9848, 144.3906],
   zoom: 8
 });
 
@@ -15,7 +15,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(myMap);
 
 // Load geojson data
-var geoData = "static/data/Median_Household_Income_2016.geojson";
+var geoData = "Users/minoperic/Data Analytics/Data Investigations/vic-median-income/static/data/vic_median_household_income_2016.geojson";
 
 var geojson;
 
