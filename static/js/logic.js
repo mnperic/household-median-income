@@ -68,7 +68,7 @@ d3.json(geoData).then(function(data) {
     div.innerHTML = legendInfo;
 
     limits.forEach(function(limit, index) {
-      labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+      labels.push("<li style=\"background-colour: " + colors[index] + "\"></li>");
     });
 
     div.innerHTML += "<ul>" + labels.join("") + "</ul>";
